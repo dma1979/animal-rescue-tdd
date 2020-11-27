@@ -19,7 +19,7 @@ public class TestConfiguration {
 
 	@Bean
 	HomePageFixture homePageFixture(WebDriver webDriver) {
-		String envUrl = System.getenv().getOrDefault("ENV_URL", "http://localhost:3000/rescue");
+		String envUrl = System.getenv().getOrDefault("ENV_URL", "http://localhost:3100/rescue");
 		return new HomePageFixture(webDriver, envUrl);
 	}
 

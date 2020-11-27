@@ -4,7 +4,7 @@ context('Animal Rescue', () => {
   const password = "test";
 
   before(() => {
-    cy.visit('http://localhost:3000');
+    cy.visit('http://localhost:3100');
   });
 
   beforeEach(() => {

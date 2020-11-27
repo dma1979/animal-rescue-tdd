@@ -10,7 +10,7 @@ init() {
 }
 
 stopFrontend() {
-  if lsof -i:3000 -t &> /dev/null; then
+  if lsof -i:3100 -t &> /dev/null; then
     printf "\n======== Stopping frontend ========\n"
     pkill node || true
   fi
@@ -31,7 +31,7 @@ startFrontend() {
 }
 
 stopBackend() {
-  if lsof -i:8080 -t &> /dev/null; then
+  if lsof -i:8100 -t &> /dev/null; then
     printf "\n======== Stopping backend ========\n"
     pkill java || true
   fi
@@ -75,6 +75,12 @@ trap stop SIGINT
 case $1 in
 init)
   init
+  ;;
+startBackend)
+  startBackend "$1"
+  ;;
+startFrontend)
+  startFrontend "$1"
   ;;
 backend)
   testBackend

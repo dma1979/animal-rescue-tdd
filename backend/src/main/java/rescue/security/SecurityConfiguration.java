@@ -34,8 +34,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 			.csrf().disable()
-			.formLogin().defaultSuccessUrl("http://localhost:3000/rescue").and()
-			.logout().logoutSuccessUrl("http://localhost:3000/rescue").and()
+			.formLogin().defaultSuccessUrl("http://localhost:3100/rescue").and()
+			.logout().logoutSuccessUrl("http://localhost:3100/rescue").and()
 			.authorizeRequests()
 				.antMatchers("/animals/*/adoption-requests/*").authenticated()
 				.antMatchers("/whoami").authenticated()
