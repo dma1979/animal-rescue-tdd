@@ -14,7 +14,7 @@ Use the following commands to manage the local lifecycle of animal-rescue
 ```
 
 ## Try it out
-Visit `https://localhost:3000/rescue`, you should see cute animal bios with the `Adopt` buttons disabled. All the information are fetched from a public `GET` backend endpoint `/animals`. 
+Visit `https://localhost:3100/rescue`, you should see cute animal bios with the `Adopt` buttons disabled. All the information are fetched from a public `GET` backend endpoint `/animals`. 
 ![homepage](./docs/images/homepage.png)
 
 Click the `Sign in to adopt` button on the top right corner, you should be redirected to the login page if you haven't already logged in. Use `alice / test` or `bob / test` credentials to log in. 

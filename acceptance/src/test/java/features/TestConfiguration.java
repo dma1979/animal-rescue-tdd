@@ -13,6 +13,10 @@ public class TestConfiguration {
 
 	@Bean
 	WebDriver webDriver() {
+
+		//Activate web-driver or set it in PATH
+		//here 'geckodriver.exe' is located on the root level of project just as an example
+		System.setProperty("webdriver.gecko.driver", "..\\geckodriver.exe");
 		boolean isHeadless = !System.getenv().containsKey("SHOW_BROWSER");
 		return new FirefoxDriver(new FirefoxOptions().setHeadless(isHeadless));
 	}

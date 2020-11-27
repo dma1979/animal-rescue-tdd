@@ -10,10 +10,10 @@ init() {
 }
 
 stopFrontend() {
-  if lsof -i:3100 -t &> /dev/null; then
+  #if lsof -i:3100 -t &> /dev/null; then
     printf "\n======== Stopping frontend ========\n"
-    pkill node || true
-  fi
+    kill $(ps | grep node | awk '{print $1}') || true
+  #fi
 }
 
 startFrontend() {
@@ -31,10 +31,10 @@ startFrontend() {
 }
 
 stopBackend() {
-  if lsof -i:8100 -t &> /dev/null; then
+  #if lsof -i:8100 -t &> /dev/null; then
     printf "\n======== Stopping backend ========\n"
-    pkill java || true
-  fi
+    kill $(ps | grep java | awk '{print $1}') || true
+  #fi
 }
 
 startBackend() {
